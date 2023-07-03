@@ -354,7 +354,6 @@ footer {
     display: flex;
     justify-content: flex-start;
     background: #F2F2F2;
-    max-width: 90%;
     margin: auto;
 }
 
@@ -549,5 +548,20 @@ footer div {
 
     footer div {
         margin-bottom: 15px;
+    }
+
+    form input:nth-child(2) {
+        width: 300px;
+    }
+
+    form input:nth-child(3) {
+        width: 50px;
+        color: var(--main-color);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .filter div {
+        text-align: center;
     }
 }
