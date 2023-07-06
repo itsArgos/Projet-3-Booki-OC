@@ -1,4 +1,4 @@
-/* ********* General ********** */
+/* ********** General ********** */
 * {
     font-family: 'Raleway', sans-serif;
     scroll-behavior: smooth;
@@ -50,7 +50,7 @@ header img {
     margin-top: 25px;
 }
 
-.btn-header {
+nav {
     padding-top: 10px;
 }
 
@@ -78,7 +78,7 @@ header a:nth-child(1)::before {
 
 header a:nth-child(2):hover::before {
     content: "";
-    width: 64px;
+    width: 65px;
     height: 2px;
     top: -8px;
     position: absolute;
@@ -101,17 +101,21 @@ form div {
     margin: 30px 0 20px;
 }
 
-form i {
-    padding: 13px 15px;
+form i:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 50px;
     border-radius: 15px 0 0 15px;
     background: var(--main-bg-color);
 }
 
 form input:nth-child(2) {
-    width: 200px;
-    text-align: center;
+    width: 150px;
+    padding-left: 20px;
     font-weight: 600;
-    font-size: 1em;
+    font-size: 1rem;
     border: 1px solid var(--main-bg-color);
     outline: none;
 }
@@ -124,8 +128,13 @@ form input:nth-child(3) {
     background: var(--main-color);
     font-weight: 600;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1rem;
 }
+
+.search-part span {
+    display: none;
+}
+
 
 .filter {
     display: flex;
@@ -144,7 +153,7 @@ form input:nth-child(3) {
     border: 2px solid #D9D9D9;
     border-radius: 25px;
     font-weight: 600;
-    font-size: 1em;
+    font-size: 1rem;
     cursor: pointer;
     transition: 0.4s ease;
 }
@@ -161,15 +170,15 @@ form input:nth-child(3) {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 10px 0 20px 0;
+    margin: 25px 0 25px 0;
 }
 
-.infos-filter div {
+.icon-infos {
     display: flex;
     align-items: center;
     padding: 11px 10px;
     margin-right: 10px;
-    border: 1px solid var(--main-bg-color);
+    border: 1px solid #D9D9D9;
     border-radius: 50px;
     cursor: pointer;
 }
@@ -190,12 +199,12 @@ form input:nth-child(3) {
 /* ********** Partie 2 Hébergements à Marseille ********** */
 .hebergements {
     width: 65%;
+    padding-bottom: 0;
 }
 
 .hebergements h2 {
-    font-size: 1.3em;
+    font-size: 1.3rem;
     margin-top: 0.5em;
-    margin-bottom: 0;
 }
 
 .hebergements img {
@@ -208,7 +217,7 @@ form input:nth-child(3) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 33px;
-    gap: 35px;
+    gap: 30px;
 }
 
 .hebergements-card {
@@ -224,10 +233,11 @@ form input:nth-child(3) {
 
 .card-content {
     padding-left: 10px;
+    padding-bottom: 7px;
 }
 
 .card-content h3 {
-    font-size: 1em;
+    font-size: 1rem;
     margin-top: 5px;
     margin-bottom: 0;
 }
@@ -245,11 +255,11 @@ form input:nth-child(3) {
     color: var(--main-bg-color)
 }
 
-.btn-show-more a {
+.btn-show-more {
     display: block;
-    margin-top: 30px;
+    margin-top: 40px;
     font-weight: 600;
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
 /*********** Partie 2 Populaires ***********/
@@ -260,7 +270,7 @@ form input:nth-child(3) {
 .populaires h2 {
     margin-top: 0.5em;
     margin-bottom: 0;
-    font-size: 1.3em;
+    font-size: 1.3rem;
 }
 
 .card {
@@ -276,7 +286,7 @@ form input:nth-child(3) {
     align-items: center;
 }
 
-.populaires-cards .card {
+.card {
     display: flex;
     margin-top: 33px;
 }
@@ -307,8 +317,12 @@ form input:nth-child(3) {
     margin: 0;
 }
 
-.populaires-cards .card-rating {
+.populaires-cards {
     margin-bottom: 5px;
+}
+
+.populaires .card-content {
+    padding-bottom: 0;
 }
 
 /* ************* Activité à Marseille ************ */
@@ -365,7 +379,6 @@ footer div {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media screen and (max-width: 1024px) {
-
     .adjust-main {
         max-width: 100%;
     }
@@ -375,6 +388,11 @@ footer div {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .filter h2 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
     }
 
     .filter button {
@@ -395,9 +413,14 @@ footer div {
         margin-top: 50px;
     }
 
+    .card {
+        margin-top: 20px;
+    }
+
     .populaires-cards {
         display: flex;
         justify-content: space-between;
+        gap: 20px;
     }
 
     .populaires-cards a {
@@ -436,35 +459,36 @@ footer div {
 
     /* **************** EN-TÊTE ************** */
     header img {
-        margin-bottom: 30px;
+        margin: 30px 0;
     }
-
 
     header {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 50px;
     }
 
-    .btn-header {
+    nav {
         display: flex;
         justify-content: space-around;
         width: 100%;
     }
 
     header a:nth-child(1) {
-        padding: 0;
+        padding-right: 20px;
     }
 
     header a:nth-child(2) {
-        padding: 0;
+        padding-right: 30px;
+        padding-left: 0;
     }
 
     header a:nth-child(1)::before {
         content: "";
-        width: 56%;
+        width: 50%;
         height: 2px;
-        top: 130px;
+        top: 133px;
         left: 0;
         position: absolute;
         background: var(--main-color);
@@ -472,36 +496,68 @@ footer div {
 
     header a:nth-child(2)::before {
         content: "";
-        width: 44%;
+        width: 50%;
         height: 2px;
-        top: 130px;
+        top: 133px;
         right: 0;
         position: absolute;
         background-color: var(--main-bg-color);
     }
 
     header a:nth-child(2):hover::before {
-        content: "";
-        width: 44%;
-        height: 2px;
-        top: 130px;
-        right: 0;
-        position: absolute;
-        background-color: var(--main-color);
+        width: 45%;
+        top: 133px;
+        background: var(--main-bg-color);
     }
 
     /* ************** RECHERCHE D'HÉBERGEMENT ***************  */
-    .first-part {
+    .line-heberg p {
+        margin-bottom: 0;
+    }
+
+    .search-part {
         max-width: 91%;
         margin: 0 auto;
     }
 
+    .search-part form {
+        display: flex;
+        justify-content: center;
+    }
+
+    .search-part span {
+        display: block;
+        position: relative;
+        left: -10px;
+    }
+
+    form input:nth-child(2) {
+        width: 220px;
+    }
+
+    form input:nth-child(3) {
+        display: none;
+    }
+
+    .search-part span i {
+        background: var(--main-color);
+        border-radius: 15px;
+    }
+
+    .filter div {
+        text-align: center;
+    }
+
     .filter button {
-        margin-right: 0;
         margin-bottom: 15px;
         padding: 0;
         width: 160px;
         height: 50px;
+    }
+
+    .filter button:nth-child(2) {
+        padding-left: 20px;
+        text-align: start;
     }
 
     /* ************** HÉBERGEMENT & POPULAIRE *************  */
@@ -515,6 +571,10 @@ footer div {
 
     .hebergements-and-populaires {
         flex-direction: column-reverse;
+    }
+
+    .btn-show-more a {
+        margin-top: 20px;
     }
 
     .populaires {
@@ -540,28 +600,19 @@ footer div {
         flex-direction: column;
     }
 
+    .title-activity {
+        padding-top: 0;
+        margin-bottom: 20px;
+    }
+
     /* ************** FOOTER ************  */
     footer {
         display: flex;
         flex-direction: column;
     }
 
-    footer div {
-        margin-bottom: 15px;
+    footer h3 {
+        margin-top: 35px;
     }
 
-    form input:nth-child(2) {
-        width: 300px;
-    }
-
-    form input:nth-child(3) {
-        width: 50px;
-        color: var(--main-color);
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .filter div {
-        text-align: center;
-    }
 }
