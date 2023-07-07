@@ -14,6 +14,12 @@
     color: var(--main-color);
 }
 
+body {
+    display: flex;
+    justify-content: center;
+
+}
+
 .main-container {
     width: 100%;
     max-width: 1440px;
@@ -24,12 +30,6 @@
 .adjust-main {
     max-width: 90%;
     margin: 0 auto;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-
 }
 
 a {
@@ -54,20 +54,20 @@ nav {
     padding-top: 10px;
 }
 
-header a:nth-child(1) {
+nav a:nth-child(1) {
     color: var(--main-color);
     font-weight: 500;
     padding-left: 0;
     padding-right: 35px;
 }
 
-header a:nth-child(2) {
+nav a:nth-child(2) {
     padding-left: 35px;
     padding-right: 0;
     font-weight: 500;
 }
 
-header a:nth-child(1)::before {
+nav a:nth-child(1)::before {
     content: "";
     width: 112px;
     height: 2px;
@@ -76,7 +76,7 @@ header a:nth-child(1)::before {
     background: var(--main-color);
 }
 
-header a:nth-child(2):hover::before {
+nav a:nth-child(2):hover::before {
     content: "";
     width: 65px;
     height: 2px;
@@ -512,7 +512,7 @@ footer div {
     }
 
     header a:nth-child(2):hover::before {
-        width: 45%;
+        width: 50%;
         top: 133px;
         background: var(--main-bg-color);
     }
