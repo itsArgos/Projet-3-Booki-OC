@@ -28,7 +28,7 @@ body {
 }
 
 .adjust-main {
-    max-width: 90%;
+    max-width: 95%;
     margin: 0 auto;
 }
 
@@ -530,6 +530,7 @@ footer div {
     .search-part form {
         display: flex;
         justify-content: center;
+        margin-top: 10px;
     }
 
     .search-part span {
@@ -557,6 +558,10 @@ footer div {
         border-radius: 15px;
     }
 
+    .filter {
+        margin-top: 0;
+    }
+
     .filter div {
         text-align: center;
     }
@@ -573,6 +578,10 @@ footer div {
         text-align: start;
     }
 
+    .infos-filter {
+        margin-top: 0;
+    }
+
     /* ************** HÉBERGEMENT & POPULAIRE *************  */
     .hebergements-and-populaires section:last-child {
         border-radius: unset;
@@ -584,6 +593,10 @@ footer div {
 
     .hebergements-and-populaires {
         flex-direction: column-reverse;
+    }
+
+    .btn-show-more {
+        margin-top: 15px;
     }
 
     .btn-show-more a {
@@ -608,6 +621,10 @@ footer div {
     }
 
     /* *************** ACTIVITÉ À MARSEILLE **************  */
+    .marseille-container {
+        width: 82%;
+    }
+
     .content-activity {
         display: flex;
         flex-direction: column;
