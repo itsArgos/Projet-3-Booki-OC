@@ -366,7 +366,7 @@ nav a:nth-child(2):hover::before {
 .title-activity {
     display: flex;
     align-items: center;
-    height: 80px;
+    height: 60px;
     box-shadow: var(--main-bg-color) 0px 1.5px 10px 0px;
     font-size: 16px;
     margin-top: -4px;
@@ -460,9 +460,19 @@ footer div {
         height: 200px;
     }
 
+    .title-activity {
+        height: 60px;
+    }
+
     /* *********** FOOTER *********  */
     footer {
         max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .title-activity {
+        height: 80px;
     }
 }
 
@@ -653,7 +663,7 @@ footer div {
     }
 
     .title-activity {
-        padding-top: 0;
+        height: 50px;
     }
 
     /* ************** FOOTER ************  */
