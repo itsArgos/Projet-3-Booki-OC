@@ -120,7 +120,6 @@ nav a:nth-child(2):hover::before {
 .search-bar input:nth-child(2) {
     width: 150px;
     padding: 0 20px 0 20px;
-    text-align: center;
     font-weight: 600;
     font-size: 1.1rem;
     border: 1px solid var(--main-bg-color);
@@ -556,7 +555,7 @@ footer div {
 
     .search-part form {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         margin-top: 10px;
     }
 
@@ -573,7 +572,7 @@ footer div {
 
     .search-bar input:nth-child(2) {
         text-align: unset;
-        width: 160px;
+        width: 60%;
         padding: 0 0 0 25px;
     }
 
@@ -593,7 +592,7 @@ footer div {
     .filter div {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin: auto;
+        justify-content: flex-start;
     }
 
     .filter button {
