@@ -347,33 +347,37 @@ nav a:nth-child(2):hover::before {
 .content-activity {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    height: 100%;
     margin-top: 30px;
     gap: 30px;
 }
 
-
-.content-activity div {
-    border-radius: 20px;
-    box-shadow: var(--main-bg-color) 0px 1.5px 10px 10px;
-    width: 100%;
-}
-
 .content-activity a {
-    display: flex;
-    justify-content: space-around;
+    box-shadow: var(--main-bg-color) 0px 1.5px 10px 0px;
+    border-radius: 20px;
 }
 
 .content-activity img {
     width: 100%;
-    height: 300px;
+    height: 350px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
 }
 
-.content-activity h3 {
-    font-size: 1rem;
-    padding-left: 20px;
+.title-activity {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    box-shadow: var(--main-bg-color) 0px 1.5px 10px 0px;
+    font-size: 16px;
+    margin-top: -4px;
+    padding-left: 19px;
+    padding-right: 19px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.title-activity h3 {
+    font-size: 1em;
+    margin: 0;
 }
 
 /* ********* FOOTER ********* */
@@ -454,10 +458,6 @@ footer div {
 
     .content-activity img {
         height: 200px;
-    }
-
-    .title-activity {
-        padding-top: 9px;
     }
 
     /* *********** FOOTER *********  */
@@ -556,13 +556,14 @@ footer div {
         left: -10px;
     }
 
-    .search-bar {
-        margin-left: 10px;
+    .search-part span i {
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     }
+
 
     .search-bar input:nth-child(2) {
         text-align: unset;
-        width: 200px;
+        width: 160px;
         padding: 0 0 0 25px;
     }
 
@@ -586,9 +587,11 @@ footer div {
     }
 
     .filter button {
+        display: flex;
+        align-items: center;
         margin-bottom: 15px;
         margin-right: 10px;
-        width: 160px;
+        width: 97%;
         height: 50px;
         font-size: 0.9rem;
         text-align: start;
@@ -643,12 +646,14 @@ footer div {
 
     .content-activity {
         display: flex;
+        margin: auto;
         flex-direction: column;
+        max-width: 95%;
+        gap: 20px;
     }
 
     .title-activity {
         padding-top: 0;
-        margin-bottom: 20px;
     }
 
     /* ************** FOOTER ************  */
