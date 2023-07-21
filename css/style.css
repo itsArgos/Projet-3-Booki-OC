@@ -653,7 +653,6 @@ footer div {
         display: flex;
         margin: auto;
         flex-direction: column;
-        max-width: 95%;
         gap: 20px;
     }
 
