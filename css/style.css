@@ -569,6 +569,7 @@ footer div {
     .search-bar input:nth-child(2) {
         text-align: unset;
         width: 60%;
+        font-size: 1rem;
         padding: 0 0 0 25px;
     }
 
